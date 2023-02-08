@@ -1,0 +1,32 @@
+Builds
+cmake-build-debug
+.idea/
+# VS files
+/ColorLFO_SharedCode.vcxproj
+/ColorLFO_StandalonePlugin.vcxproj.filters
+/ColorLFO_StandalonePlugin.vcxproj.user
+/ColorLFO_VST3.vcxproj.filters
+/ColorLFO_VST3.vcxproj
+/resources.rc
+/ColorLFO_StandalonePlugin.vcxproj
+/ColorLFO_SharedCode.vcxproj.filters
+/x64/Debug/Shared Code/
+/x64/Debug/Standalone Plugin/ColorLFO.exe.recipe
+/x64/Debug/Standalone Plugin/*.tlog
+/x64/Debug/Standalone Plugin/ColorLFO.ilk
+/x64/Debug/Standalone Plugin/ColorLFO.pdb
+/x64/Debug/Standalone Plugin/ColorLFO_StandalonePlugin.vcxproj.FileListAbsolute.txt
+/x64/Debug/Standalone Plugin/include_juce_audio_plugin_client_Standalone.obj
+/x64/Debug/Standalone Plugin/resources.res
+/.vs/
+/x64/Debug/VST3/*.tlog/
+/x64/Debug/VST3/ColorLFO.exp
+/x64/Debug/VST3/ColorLFO.lib
+/x64/Debug/VST3/ColorLFO.pdb
+/x64/Debug/VST3/ColorLFO.vst3.recipe
+/x64/Debug/VST3/ColorLFO_VST3.log
+/x64/Debug/VST3/ColorLFO.ilk
+/x64/Debug/VST3/ColorLFO_VST3.vcxproj.FileListAbsolute.txt
+/x64/Debug/VST3/include_juce_audio_plugin_client_VST3.obj
+/x64/Debug/VST3/resources.res
+/JuceLibraryCode/

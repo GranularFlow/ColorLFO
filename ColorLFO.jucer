@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="YZ0osq" name="ColorLFO" projectType="audioplug" useAppConfig="1"
+              displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="RDeMgH" name="ColorLFO">
+    <GROUP id="{D23580F4-4F8E-0FD0-AD21-F0DB5C32F9D3}" name="Source">
+      <GROUP id="{16DA4312-62E0-0717-87BC-DD07871B8FC3}" name="CustomSetting">
+        <FILE id="AQtzN8" name="CustomLook.cpp" compile="1" resource="0" file="Source/CustomSetting/CustomLook.cpp"/>
+        <FILE id="DgGJOj" name="CustomLook.h" compile="0" resource="0" file="Source/CustomSetting/CustomLook.h"/>
+        <FILE id="ERDP8I" name="DropDownSelect.cpp" compile="1" resource="0"
+              file="Source/CustomSetting/DropDownSelect.cpp"/>
+        <FILE id="lbBBMg" name="DropDownSelect.h" compile="0" resource="0"
+              file="Source/CustomSetting/DropDownSelect.h"/>
+        <FILE id="w0NQme" name="Knob.cpp" compile="1" resource="0" file="Source/CustomSetting/Knob.cpp"/>
+        <FILE id="CMEpbE" name="Knob.h" compile="0" resource="0" file="Source/CustomSetting/Knob.h"/>
+        <FILE id="OoRrhk" name="NumberSelect.cpp" compile="1" resource="0"
+              file="Source/CustomSetting/NumberSelect.cpp"/>
+        <FILE id="hDpqxZ" name="NumberSelect.h" compile="0" resource="0" file="Source/CustomSetting/NumberSelect.h"/>
+        <FILE id="uGq72i" name="RadioBox.cpp" compile="1" resource="0" file="Source/CustomSetting/RadioBox.cpp"/>
+        <FILE id="XR2L3R" name="RadioBox.h" compile="0" resource="0" file="Source/CustomSetting/RadioBox.h"/>
+        <FILE id="GThGC7" name="Separator.h" compile="0" resource="0" file="Source/CustomSetting/Separator.h"/>
+      </GROUP>
+      <GROUP id="{73089615-9F63-E3B8-6D8A-46389FEE3F28}" name="images">
+        <FILE id="OpotbL" name="logo250.png" compile="0" resource="1" file="Source/images/logo250.png"/>
+      </GROUP>
+      <GROUP id="{F0688625-BF0A-62E2-B760-90A5F6DB1FD2}" name="Utils">
+        <FILE id="JMgZT4" name="Utils.cpp" compile="1" resource="0" file="Source/Utils/Utils.cpp"/>
+        <FILE id="nkUscb" name="Utils.h" compile="0" resource="0" file="Source/Utils/Utils.h"/>
+      </GROUP>
+      <FILE id="tN27lN" name="Constants.h" compile="0" resource="0" file="Source/Constants.h"/>
+      <GROUP id="{ED9B3A6D-3F0D-EB96-D168-4B9DE65BA475}" name="ColorLFO">
+        <GROUP id="{4851ABBB-91E3-0D5C-936B-68E1F4872EDC}" name="ColorDecomposer">
+          <FILE id="xwnWol" name="ColorDecomposer.cpp" compile="1" resource="0"
+                file="Source/ColorLFO/ColorDecomposer/ColorDecomposer.cpp"/>
+          <FILE id="AOQePL" name="ColorDecomposer.h" compile="0" resource="0"
+                file="Source/ColorLFO/ColorDecomposer/ColorDecomposer.h"/>
+        </GROUP>
+        <GROUP id="{A60A110D-C07D-0DCA-7181-7C227B3E011A}" name="ImageHandler">
+          <FILE id="HHcquP" name="ImageHandler.cpp" compile="1" resource="0"
+                file="Source/ColorLFO/ImageHandler/ImageHandler.cpp"/>
+          <FILE id="H73Eyx" name="ImageHandler.h" compile="0" resource="0" file="Source/ColorLFO/ImageHandler/ImageHandler.h"/>
+        </GROUP>
+        <GROUP id="{B2D6CC32-CAA5-C09F-FB57-28EC7DA6A69A}" name="LfoSettings">
+          <FILE id="VATurs" name="LfoSettings.cpp" compile="1" resource="0" file="Source/ColorLFO/LfoSettings/LfoSettings.cpp"/>
+          <FILE id="eOFqBv" name="LfoSettings.h" compile="0" resource="0" file="Source/ColorLFO/LfoSettings/LfoSettings.h"/>
+        </GROUP>
+        <FILE id="VQjBJa" name="ColorLFO.cpp" compile="1" resource="0" file="Source/ColorLFO/ColorLFO.cpp"/>
+        <FILE id="UE2mLj" name="ColorLFO.h" compile="0" resource="0" file="Source/ColorLFO/ColorLFO.h"/>
+      </GROUP>
+      <FILE id="Qif3c0" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="hfmnX6" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="VLTl2u" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="DGAdiJ" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+    </GROUP>
+  </MAINGROUP>
+  <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
+  <EXPORTFORMATS>
+    <VS2022 targetFolder="./">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" targetName="ColorLFO"/>
+        <CONFIGURATION isDebug="0" name="Release" targetName="ColorLFO"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../../../../../JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../../../../../JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2022>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+</JUCERPROJECT>
