@@ -21,18 +21,12 @@ LfoSettings::~LfoSettings()
 
 void LfoSettings::initGui()
 {
-    // GUI
-    for (int8 i = 0; i < 3; i++)
-    {
-        separators.add(new Separator());
-        addAndMakeVisible(separators.getLast());
-    }
-
-
     addAndMakeVisible(colorSelectRadioBox);
     addAndMakeVisible(directionRadioBox);
     addAndMakeVisible(depthKnob);
     addAndMakeVisible(rateKnob);
+    addAndMakeVisible(uploadButton);
+    
 }
 
 void LfoSettings::paint(Graphics& g)
@@ -51,20 +45,48 @@ void LfoSettings::resized()
             FlexBox::JustifyContent::spaceBetween
     };
     
-    int tmpWidth = getWidth() * 1/4 * 0.85;
+    int tmpWidth = getWidth() * 1/5 * 0.85;
     int tmpHeight = getHeight() * 0.85;
 
     Utils::addToFb(&fb, directionRadioBox, 1, tmpWidth, tmpHeight);
     Utils::addToFb(&fb, rateKnob, 3, tmpWidth, tmpHeight);
     Utils::addToFb(&fb, depthKnob, 5, tmpWidth, tmpHeight );
     Utils::addToFb(&fb, colorSelectRadioBox, 7, tmpWidth, tmpHeight);
+    Utils::addToFb(&fb, uploadButton, 9, tmpWidth, tmpHeight/2);
+
+
+    for (int8 i = 0; i < 5; i++)
+    {
+        separators.add(new Separator());
+        addAndMakeVisible(separators.getLast());
+    }
 
     // White lines
-    for (int8 i = 0; i < 4; i++)
+    for (int8 i = 0; i < 5; i++)
     {
         fb.items.add(FlexItem(*separators[i]).withMinWidth(1).withHeight(tmpHeight).withOrder((i + 1) * 2));
     }
 
     fb.performLayout(getLocalBounds());
 
+}
+
+bool LfoSettings::isCurrentDirection(Direction currentDirection)
+{
+    return (directionRadioBox.getValue() == currentDirection);
+}
+
+bool LfoSettings::isCurrentSelectedColor(SelectedColor selectedColor)
+{
+    return (colorSelectRadioBox.getValue() == selectedColor);
+}
+
+int LfoSettings::getRate()
+{
+    return rateKnob.getValue();
+}
+
+int LfoSettings::getDepth()
+{
+    return depthKnob.getValue();
 }

@@ -29,13 +29,17 @@
       </GROUP>
       <FILE id="tN27lN" name="Constants.h" compile="0" resource="0" file="Source/Constants.h"/>
       <GROUP id="{ED9B3A6D-3F0D-EB96-D168-4B9DE65BA475}" name="ColorLFO">
-        <GROUP id="{4851ABBB-91E3-0D5C-936B-68E1F4872EDC}" name="ColorDecomposer">
-          <FILE id="xwnWol" name="ColorDecomposer.cpp" compile="1" resource="0"
-                file="Source/ColorLFO/ColorDecomposer/ColorDecomposer.cpp"/>
-          <FILE id="AOQePL" name="ColorDecomposer.h" compile="0" resource="0"
-                file="Source/ColorLFO/ColorDecomposer/ColorDecomposer.h"/>
-        </GROUP>
         <GROUP id="{A60A110D-C07D-0DCA-7181-7C227B3E011A}" name="ImageHandler">
+          <GROUP id="{B4B5DF95-22DA-DA6D-D91C-C126A0CEDAFC}" name="ColorDecomposer">
+            <GROUP id="{F2EC7C0C-A8FF-77E8-1732-EFAD2026E19C}" name="ColorTile">
+              <FILE id="d6qRWx" name="ColorTile.cpp" compile="1" resource="0" file="Source/ColorLFO/ImageHandler/ColorDecomposer/ColorTile/ColorTile.cpp"/>
+              <FILE id="ICqrNd" name="ColorTile.h" compile="0" resource="0" file="Source/ColorLFO/ImageHandler/ColorDecomposer/ColorTile/ColorTile.h"/>
+            </GROUP>
+            <FILE id="cCuTwy" name="ColorDecomposer.cpp" compile="1" resource="0"
+                  file="Source/ColorLFO/ImageHandler/ColorDecomposer/ColorDecomposer.cpp"/>
+            <FILE id="MnOokb" name="ColorDecomposer.h" compile="0" resource="0"
+                  file="Source/ColorLFO/ImageHandler/ColorDecomposer/ColorDecomposer.h"/>
+          </GROUP>
           <FILE id="HHcquP" name="ImageHandler.cpp" compile="1" resource="0"
                 file="Source/ColorLFO/ImageHandler/ImageHandler.cpp"/>
           <FILE id="H73Eyx" name="ImageHandler.h" compile="0" resource="0" file="Source/ColorLFO/ImageHandler/ImageHandler.h"/>

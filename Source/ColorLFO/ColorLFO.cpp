@@ -13,18 +13,20 @@
 
 ColorLFO::ColorLFO()
 {
+    startTimerHz(20);
     initGui();
+    addListeners();
 }
 
 ColorLFO::~ColorLFO()
 {
+    stopTimer();
+    removeListeners();
 }
 
 void ColorLFO::initGui()
 {
     addAndMakeVisible(imageHandler);
-    addAndMakeVisible(uploadButton);
-    addAndMakeVisible(colorDecomposer);
     addAndMakeVisible(settings);
 }
 
@@ -37,20 +39,9 @@ void ColorLFO::paint(Graphics& g)
 
 void ColorLFO::resized()
 {
-    FlexBox fb{
-           FlexBox::Direction::row,
-           FlexBox::Wrap::noWrap,
-           FlexBox::AlignContent::center,
-           FlexBox::AlignItems::center,
-           FlexBox::JustifyContent::spaceBetween
-    };
-    Utils::addToFb(&fb, imageHandler, 0, (getWidth() / 2) - 50, ((getHeight() - 50) / 2)-25);
-    Utils::addToFb(&fb, uploadButton, 1, 60, 40);
-    Utils::addToFb(&fb, colorDecomposer, 2, (getWidth() / 2) - 50, ((getHeight() - 50) / 2) - 25);
-
-    fb.performLayout(getLocalBounds().withTrimmedTop(50).withTrimmedBottom((getHeight() - 50) * 1/5).withTrimmedLeft(5).withTrimmedRight(5));
-    
-    settings.setBounds(getLocalBounds().withTrimmedTop((getHeight() - 50) * 4/5).withTrimmedBottom(10).withTrimmedLeft(getWidth() * 1/4).withTrimmedRight(getWidth() * 1 / 4));
+    Rectangle<int> settingsBounds = getLocalBounds().withTrimmedTop((getHeight() - 50) * 4 / 5).withTrimmedBottom(10).withTrimmedLeft(getWidth() * 1 / 4).withTrimmedRight(getWidth() * 1 / 4);
+    settings.setBounds(settingsBounds);
+    imageHandler.setBounds(getLocalBounds().withTrimmedTop(60).withTrimmedBottom(settingsBounds.getHeight() + 20).withTrimmedLeft(20).withTrimmedRight(20));
 }
 
 void ColorLFO::paintLogoOnce(Graphics& g)
@@ -62,13 +53,87 @@ void ColorLFO::paintLogoOnce(Graphics& g)
 
 void ColorLFO::addListeners()
 {
+    settings.uploadButton.addListener(this);
+    settings.depthKnob.slider.addListener(this);
+    settings.rateKnob.slider.addListener(this);
 }
 
 void ColorLFO::removeListeners()
 {
+    settings.uploadButton.removeListener(this);
+    settings.depthKnob.slider.removeListener(this);
+    settings.rateKnob.slider.removeListener(this);
 }
 
 void ColorLFO::timerCallback()
 {
+    checkNextColor();
 }
 
+void ColorLFO::buttonClicked(Button* button)
+{
+    if (button == &settings.uploadButton)
+    {
+        imageHandler.loadImage();
+    }
+}
+
+void ColorLFO::sliderValueChanged(Slider* slider)
+{
+    if (slider == &settings.rateKnob.slider)
+    {
+        stopTimer();
+        startTimerHz(slider->getValue());
+    }
+}
+
+void ColorLFO::checkNextColor()
+{
+    if (!imageHandler.isImageSet()) {
+        return;
+    }
+
+    imageHandler.setColors(currentX, currentY);
+
+    if (settings.isCurrentDirection(LfoSettings::RANDOM))
+    {
+        Random random;
+        currentX = random.nextInt(imageHandler.getImageWidth());
+        currentY = random.nextInt(imageHandler.getImageHeight());
+    }
+    else if (settings.isCurrentDirection(LfoSettings::FORWARD)) {
+        currentX = (currentX + 1) % imageHandler.getImageWidth();
+        if (currentX == imageHandler.getImageWidth() - 2)
+        {
+            currentX = 0;
+            currentY = (currentY + 1) % imageHandler.getImageHeight();
+        }
+    }
+    else if (settings.isCurrentDirection(LfoSettings::REVERSED)) {
+
+        currentX = (currentX - 1) % imageHandler.getImageWidth();
+        if (currentX == 0)
+        {
+            currentX = 0;
+            currentY = (currentY - 1) % imageHandler.getImageHeight();
+        }
+
+    }
+
+    if (settings.isCurrentSelectedColor(LfoSettings::RED))
+    {
+        outputValue = imageHandler.getRed(currentX, currentY);
+    }
+    else if (settings.isCurrentSelectedColor(LfoSettings::GREEN)) {
+        outputValue = imageHandler.getGreen(currentX, currentY);
+
+    }
+    else if (settings.isCurrentSelectedColor(LfoSettings::BLUE)) {
+        outputValue = imageHandler.getBlue(currentX, currentY);
+    }
+}
+
+float ColorLFO::getOutputValue()
+{
+    return outputValue * (settings.getDepth() /(float) 100);
+}

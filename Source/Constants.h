@@ -35,7 +35,7 @@ const Array<String> RUNNING_MODE = {"STATIC", "RUNNING"};
 const Array<String> MIDI_MODE = {"OFF", "ON"};
 const Array<String> WINDOW_TYPE = { "HALF SINE", "HANN", "TRIANGLE"};
 const Array<String> INTERPOLATION_TYPE = { "LINEAR", "CUBIC", "HEARMITE" };
-const Array<String> DIRECTION_MODE = { "RANDOM", "X", "REVERSED_X" };
+const Array<String> DIRECTION_MODE = { "RANDOM", "FORWARD", "REVERSED" };
 const Array<String> SELECTED_COLOR = { "RED", "GREEN", "BLUE" };
 
 
