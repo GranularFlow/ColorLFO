@@ -4,60 +4,65 @@
               displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="RDeMgH" name="ColorLFO">
     <GROUP id="{D23580F4-4F8E-0FD0-AD21-F0DB5C32F9D3}" name="Source">
-      <GROUP id="{16DA4312-62E0-0717-87BC-DD07871B8FC3}" name="CustomSetting">
-        <FILE id="AQtzN8" name="CustomLook.cpp" compile="1" resource="0" file="Source/CustomSetting/CustomLook.cpp"/>
-        <FILE id="DgGJOj" name="CustomLook.h" compile="0" resource="0" file="Source/CustomSetting/CustomLook.h"/>
-        <FILE id="ERDP8I" name="DropDownSelect.cpp" compile="1" resource="0"
-              file="Source/CustomSetting/DropDownSelect.cpp"/>
-        <FILE id="lbBBMg" name="DropDownSelect.h" compile="0" resource="0"
-              file="Source/CustomSetting/DropDownSelect.h"/>
-        <FILE id="w0NQme" name="Knob.cpp" compile="1" resource="0" file="Source/CustomSetting/Knob.cpp"/>
-        <FILE id="CMEpbE" name="Knob.h" compile="0" resource="0" file="Source/CustomSetting/Knob.h"/>
-        <FILE id="OoRrhk" name="NumberSelect.cpp" compile="1" resource="0"
-              file="Source/CustomSetting/NumberSelect.cpp"/>
-        <FILE id="hDpqxZ" name="NumberSelect.h" compile="0" resource="0" file="Source/CustomSetting/NumberSelect.h"/>
-        <FILE id="uGq72i" name="RadioBox.cpp" compile="1" resource="0" file="Source/CustomSetting/RadioBox.cpp"/>
-        <FILE id="XR2L3R" name="RadioBox.h" compile="0" resource="0" file="Source/CustomSetting/RadioBox.h"/>
-        <FILE id="GThGC7" name="Separator.h" compile="0" resource="0" file="Source/CustomSetting/Separator.h"/>
+      <GROUP id="{11CAFAFF-CBDC-4EC6-97E4-6153D9A915FA}" name="CustomComponents">
+        <GROUP id="{7E648F0C-5A0D-A553-DCAD-129FF0D1B865}" name="CustomLooks">
+          <FILE id="SI8Ner" name="CustomLook.cpp" compile="1" resource="0" file="Source/CustomComponents/CustomLooks/CustomLook.cpp"/>
+          <FILE id="PRUX5m" name="CustomLook.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/CustomLook.h"/>
+          <FILE id="mXwakk" name="Knob.cpp" compile="1" resource="0" file="Source/CustomComponents/CustomLooks/Knob.cpp"/>
+          <FILE id="Lxv2Sn" name="Knob.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/Knob.h"/>
+          <FILE id="MqPnhh" name="NumberSelect.cpp" compile="1" resource="0"
+                file="Source/CustomComponents/CustomLooks/NumberSelect.cpp"/>
+          <FILE id="BA6wsp" name="NumberSelect.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/NumberSelect.h"/>
+          <FILE id="N9OUTr" name="RadioBox.cpp" compile="1" resource="0" file="Source/CustomComponents/CustomLooks/RadioBox.cpp"/>
+          <FILE id="PGj4dY" name="RadioBox.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/RadioBox.h"/>
+          <FILE id="qKG1AL" name="Separator.h" compile="0" resource="0" file="Source/CustomComponents/CustomLooks/Separator.h"/>
+        </GROUP>
+        <GROUP id="{6325D7D7-C300-3615-AA24-E6A7CC96BF6D}" name="Images">
+          <FILE id="BVAk4D" name="logo250.png" compile="0" resource="1" file="Source/CustomComponents/Images/logo250.png"/>
+        </GROUP>
       </GROUP>
-      <GROUP id="{73089615-9F63-E3B8-6D8A-46389FEE3F28}" name="images">
-        <FILE id="OpotbL" name="logo250.png" compile="0" resource="1" file="Source/images/logo250.png"/>
+      <GROUP id="{93BBE63F-D8F1-A937-68F8-DA77130EDCF9}" name="LFOs">
+        <GROUP id="{A47E4735-B252-89C9-2383-030C0283181D}" name="ColorLFO">
+          <GROUP id="{785BF5D7-2EB1-2B5A-0964-ACD986A55E7D}" name="ImageHandler">
+            <GROUP id="{858BFFFD-69DD-EBA6-0372-D54EF4D1BD1E}" name="ColorDecomposer">
+              <GROUP id="{9650ECCC-1C20-CD33-AAEA-0170D35CDACF}" name="ColorTile">
+                <FILE id="dhd0J6" name="ColorTile.cpp" compile="1" resource="0" file="Source/LFOs/ColorLFO/ImageHandler/ColorDecomposer/ColorTile/ColorTile.cpp"/>
+                <FILE id="kw2PsU" name="ColorTile.h" compile="0" resource="0" file="Source/LFOs/ColorLFO/ImageHandler/ColorDecomposer/ColorTile/ColorTile.h"/>
+              </GROUP>
+              <FILE id="eVwcUF" name="ColorDecomposer.cpp" compile="1" resource="0"
+                    file="Source/LFOs/ColorLFO/ImageHandler/ColorDecomposer/ColorDecomposer.cpp"/>
+              <FILE id="Kw5t6h" name="ColorDecomposer.h" compile="0" resource="0"
+                    file="Source/LFOs/ColorLFO/ImageHandler/ColorDecomposer/ColorDecomposer.h"/>
+            </GROUP>
+            <GROUP id="{86BF1433-ED73-9CA5-3254-3643F8521175}" name="ImageDisplay"/>
+            <FILE id="Jvnkj8" name="ImageHandler.cpp" compile="1" resource="0"
+                  file="Source/LFOs/ColorLFO/ImageHandler/ImageHandler.cpp"/>
+            <FILE id="O2x4r9" name="ImageHandler.h" compile="0" resource="0" file="Source/LFOs/ColorLFO/ImageHandler/ImageHandler.h"/>
+          </GROUP>
+          <GROUP id="{FBF8912A-097A-AA12-2E20-249C755826CB}" name="LfoSettings">
+            <FILE id="Zfhv69" name="LfoSettings.cpp" compile="1" resource="0" file="Source/LFOs/ColorLFO/LfoSettings/LfoSettings.cpp"/>
+            <FILE id="p7Bwad" name="LfoSettings.h" compile="0" resource="0" file="Source/LFOs/ColorLFO/LfoSettings/LfoSettings.h"/>
+          </GROUP>
+          <FILE id="HmkKiH" name="ColorLFO.cpp" compile="1" resource="0" file="Source/LFOs/ColorLFO/ColorLFO.cpp"/>
+          <FILE id="Edti6U" name="ColorLFO.h" compile="0" resource="0" file="Source/LFOs/ColorLFO/ColorLFO.h"/>
+        </GROUP>
       </GROUP>
       <GROUP id="{F0688625-BF0A-62E2-B760-90A5F6DB1FD2}" name="Utils">
-        <FILE id="JMgZT4" name="Utils.cpp" compile="1" resource="0" file="Source/Utils/Utils.cpp"/>
-        <FILE id="nkUscb" name="Utils.h" compile="0" resource="0" file="Source/Utils/Utils.h"/>
-      </GROUP>
-      <FILE id="tN27lN" name="Constants.h" compile="0" resource="0" file="Source/Constants.h"/>
-      <GROUP id="{ED9B3A6D-3F0D-EB96-D168-4B9DE65BA475}" name="ColorLFO">
-        <GROUP id="{A60A110D-C07D-0DCA-7181-7C227B3E011A}" name="ImageHandler">
-          <GROUP id="{B4B5DF95-22DA-DA6D-D91C-C126A0CEDAFC}" name="ColorDecomposer">
-            <GROUP id="{F2EC7C0C-A8FF-77E8-1732-EFAD2026E19C}" name="ColorTile">
-              <FILE id="d6qRWx" name="ColorTile.cpp" compile="1" resource="0" file="Source/ColorLFO/ImageHandler/ColorDecomposer/ColorTile/ColorTile.cpp"/>
-              <FILE id="ICqrNd" name="ColorTile.h" compile="0" resource="0" file="Source/ColorLFO/ImageHandler/ColorDecomposer/ColorTile/ColorTile.h"/>
-            </GROUP>
-            <FILE id="cCuTwy" name="ColorDecomposer.cpp" compile="1" resource="0"
-                  file="Source/ColorLFO/ImageHandler/ColorDecomposer/ColorDecomposer.cpp"/>
-            <FILE id="MnOokb" name="ColorDecomposer.h" compile="0" resource="0"
-                  file="Source/ColorLFO/ImageHandler/ColorDecomposer/ColorDecomposer.h"/>
-          </GROUP>
-          <FILE id="HHcquP" name="ImageHandler.cpp" compile="1" resource="0"
-                file="Source/ColorLFO/ImageHandler/ImageHandler.cpp"/>
-          <FILE id="H73Eyx" name="ImageHandler.h" compile="0" resource="0" file="Source/ColorLFO/ImageHandler/ImageHandler.h"/>
+        <GROUP id="{2795A5CC-9D3E-6CA0-26E6-72D8B8FC9002}" name="AudioLoad">
+          <FILE id="djK4TY" name="AudioLoad.cpp" compile="1" resource="0" file="Source/Utils/AudioLoad/AudioLoad.cpp"/>
+          <FILE id="l9UHGC" name="AudioLoad.h" compile="0" resource="0" file="Source/Utils/AudioLoad/AudioLoad.h"/>
         </GROUP>
-        <GROUP id="{B2D6CC32-CAA5-C09F-FB57-28EC7DA6A69A}" name="LfoSettings">
-          <FILE id="VATurs" name="LfoSettings.cpp" compile="1" resource="0" file="Source/ColorLFO/LfoSettings/LfoSettings.cpp"/>
-          <FILE id="eOFqBv" name="LfoSettings.h" compile="0" resource="0" file="Source/ColorLFO/LfoSettings/LfoSettings.h"/>
-        </GROUP>
-        <FILE id="VQjBJa" name="ColorLFO.cpp" compile="1" resource="0" file="Source/ColorLFO/ColorLFO.cpp"/>
-        <FILE id="UE2mLj" name="ColorLFO.h" compile="0" resource="0" file="Source/ColorLFO/ColorLFO.h"/>
+        <FILE id="Lxcq3p" name="Constants.h" compile="0" resource="0" file="Source/Utils/Constants.h"/>
+        <FILE id="xgfCU4" name="Utils.cpp" compile="1" resource="0" file="Source/Utils/Utils.cpp"/>
+        <FILE id="RCrbRR" name="Utils.h" compile="0" resource="0" file="Source/Utils/Utils.h"/>
       </GROUP>
-      <FILE id="Qif3c0" name="PluginProcessor.cpp" compile="1" resource="0"
-            file="Source/PluginProcessor.cpp"/>
-      <FILE id="hfmnX6" name="PluginProcessor.h" compile="0" resource="0"
-            file="Source/PluginProcessor.h"/>
-      <FILE id="VLTl2u" name="PluginEditor.cpp" compile="1" resource="0"
+      <FILE id="dQwdjC" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
-      <FILE id="DGAdiJ" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="jSy1t0" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="d86Jjr" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="pm1Hdq" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>

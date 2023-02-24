@@ -9,7 +9,7 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "ColorLFO/ColorLFO.h"
+#include "Lfos/ColorLFO/ColorLFO.h"
 //==============================================================================
 /**
 */
